@@ -1,8 +1,8 @@
 {
   "$schema": "./node_modules/ng-packagr/package.schema.json",
   "name": "@martindalec/material-daterange-picker",
-  "description": "Angular Material Datepicker with Timepicker",
-  "version": "1.1.3",
+  "description": "Angular Material DateRange Picker",
+  "version": "1.1.4",
   "keywords": [
     "angular",
     "angular2",

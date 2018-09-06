@@ -11,7 +11,7 @@ let packageJson = JSON.parse(fs.readFileSync('package.json', {
 const version = packageJson['version'];
 
 // datepicker
-packageJson = JSON.parse(fs.readFileSync('./package.json'));
+packageJson = JSON.parse(fs.readFileSync('./dist/package.json'));
 packageJson['version'] = version;
 
-fs.writeFileSync('./package.json', JSON.stringify(packageJson, undefined, 2));
+fs.writeFileSync('./dist/package.json', JSON.stringify(packageJson, undefined, 2));
