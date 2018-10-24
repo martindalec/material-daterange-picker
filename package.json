@@ -2,7 +2,7 @@
   "$schema": "./node_modules/ng-packagr/package.schema.json",
   "name": "@martindalec/material-daterange-picker",
   "description": "Angular Material DateRange Picker",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "keywords": [
     "angular",
     "angular2",

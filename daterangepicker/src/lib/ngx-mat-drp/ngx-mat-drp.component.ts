@@ -40,8 +40,7 @@ export class NgxMatDrpComponent implements OnInit, OnDestroy {
         const from:string = this.formatToDateString(range.fromDate, this.options.format);
         const to:string = this.formatToDateString(range.toDate, this.options.format);
         this.selectedDateRange = `${from} - ${to}`;
-        if(this.options.range.fromDate !== range.fromDate && this.options.range.toDate !== range.toDate)
-          this.selectedDateRangeChanged.emit(range);
+        this.selectedDateRangeChanged.emit(range);
       }
     );
 
