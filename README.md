@@ -9,8 +9,6 @@ Angular Material Date range picker with configurable Date presets.
 Fully compatible with latest Angular versions.
 Please see the installation table below for version compatability.
 
-Packaged using [ng-packagr](http://spektrakel.de/ng-packagr/)
-
 ## Demo
 
 https://ashishgkwd.github.io/ngx-mat-daterange-picker/
