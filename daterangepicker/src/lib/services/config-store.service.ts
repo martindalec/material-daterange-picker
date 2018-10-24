@@ -3,7 +3,6 @@ import { NgxDrpOptions } from '../model/model';
 
 @Injectable()
 export class ConfigStoreService {
-
   private _ngxDrpOptions:NgxDrpOptions;
   private defaultOptions = {
     excludeWeekends:false,
@@ -15,11 +14,11 @@ export class ConfigStoreService {
 
   constructor() { }
 
-  get ngxDrpOptions():NgxDrpOptions {
+  get ngxDrpOptions(): NgxDrpOptions {
     return this._ngxDrpOptions;
   }
 
-  set ngxDrpOptions(options:NgxDrpOptions) {
+  set ngxDrpOptions(options: NgxDrpOptions) {
     this._ngxDrpOptions = {...this.defaultOptions, ...options};
   }
 }

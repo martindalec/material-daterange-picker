@@ -5,8 +5,6 @@ import { NgxDrpOptions, CalendarOverlayConfig } from '../model/model';
 import { takeWhile } from 'rxjs/operators';
 import { PickerOverlayComponent } from '../picker-overlay/picker-overlay.component';
 
-
-
 const DEFAULT_CONFIG:  CalendarOverlayConfig = {
   panelClass:'ngx-mat-drp-overlay',
   hasBackdrop:true,
@@ -16,7 +14,6 @@ const DEFAULT_CONFIG:  CalendarOverlayConfig = {
 
 @Injectable()
 export class CalendarOverlayService {
-
   private hostElemRef:ElementRef;
 
   constructor(private overlay:Overlay, private injector:Injector) { }

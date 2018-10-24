@@ -34,12 +34,14 @@ export class NgxMatDrpComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.configStoreService.ngxDrpOptions = this.options; 
+    this.options.placeholder = this.options.placeholder || 'Choose a date';
     this.rangeUpdate$ = this.rangeStoreService.rangeUpdate$.subscribe(
       (range) => {
         const from:string = this.formatToDateString(range.fromDate, this.options.format);
         const to:string = this.formatToDateString(range.toDate, this.options.format);
         this.selectedDateRange = `${from} - ${to}`;
-        this.selectedDateRangeChanged.emit(range);
+        if(this.options.range.fromDate !== range.fromDate && this.options.range.toDate !== range.toDate)
+          this.selectedDateRangeChanged.emit(range);
       }
     );
 
@@ -59,6 +61,13 @@ export class NgxMatDrpComponent implements OnInit, OnDestroy {
 
   openCalendar(event){
     const overlayRef:OverlayRef =  this.calendarOverlayService.open(this.options.calendarOverlayConfig, this.calendarInput);
+  }
+
+  public resetDates(range: Range) {
+    this.rangeStoreService.updateRange(
+      range.fromDate,
+      range.toDate
+    );
   }
 
 }

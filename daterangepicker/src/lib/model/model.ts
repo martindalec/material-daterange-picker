@@ -1,4 +1,3 @@
-
 export interface PresetItem {
     presetLabel: string;
     range:Range;
@@ -21,12 +20,14 @@ export interface NgxDrpOptions {
     format: string;
     range: Range;
     excludeWeekends?: boolean;
-    locale?:string;
-    fromMinMax?:Range;
-    toMinMax?:Range;
-    applyLabel?:string;
-    cancelLabel?:string;
-    animation?:boolean;
-    calendarOverlayConfig?:CalendarOverlayConfig;
-
+    locale?: string;
+    fromMinMax?: Range;
+    toMinMax?: Range;
+    applyLabel?: string;
+    cancelLabel?: string;
+    animation?: boolean;
+    calendarOverlayConfig?: CalendarOverlayConfig;
+    placeholder?: string;
+    startDatePrefix?: string;
+    endDatePrefix?: string;
 }
