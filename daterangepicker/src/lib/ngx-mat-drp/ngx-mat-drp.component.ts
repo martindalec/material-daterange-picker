@@ -69,4 +69,11 @@ export class NgxMatDrpComponent implements OnInit, OnDestroy {
     );
   }
 
+  public updateDates(range: Range) {
+    this.rangeStoreService.updateRange(
+      range.fromDate,
+      range.toDate
+    );
+  }
+
 }

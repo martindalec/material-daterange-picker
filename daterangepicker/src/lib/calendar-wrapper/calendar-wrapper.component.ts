@@ -10,7 +10,7 @@ import { ConfigStoreService } from '../services/config-store.service';
 })
 export class CalendarWrapperComponent implements OnChanges {
 
-  @ViewChild(MatCalendar) matCalendar: MatCalendar<Date>;
+  @ViewChild(MatCalendar, { static: true }) matCalendar: MatCalendar<Date>;
 
   @Output() readonly selectedDateChange:EventEmitter<Date> = new EventEmitter<Date>();
 

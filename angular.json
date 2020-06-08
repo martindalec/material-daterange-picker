@@ -5,37 +5,37 @@
   "defaultProject": "daterangepicker",
   "projects": {
     "daterangepicker": {
-      "root": "./daterangepicker",
-      "sourceRoot": "./daterangepicker/src",
+      "root": "daterangepicker",
+      "sourceRoot": "daterangepicker/src",
       "projectType": "library",
       "prefix": "mat",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "./daterangepicker/tsconfig.lib.json",
-            "project": "./daterangepicker/ng-package.json"
+            "tsConfig": "daterangepicker/tsconfig.lib.json",
+            "project": "daterangepicker/ng-package.json"
           },
           "configurations": {
             "production": {
-              "project": "./daterangepicker/ng-package.prod.json"
+              "project": "daterangepicker/ng-package.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "./daterangepicker/src/test.ts",
-            "tsConfig": "./daterangepicker/tsconfig.spec.json",
-            "karmaConfig": "./daterangepicker/karma.conf.js"
+            "main": "daterangepicker/src/test.ts",
+            "tsConfig": "daterangepicker/tsconfig.spec.json",
+            "karmaConfig": "daterangepicker/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "./daterangepicker/tsconfig.lib.json",
-              "./daterangepicker/tsconfig.spec.json"
+              "daterangepicker/tsconfig.lib.json",
+              "daterangepicker/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
